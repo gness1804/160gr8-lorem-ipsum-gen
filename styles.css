@@ -23,7 +23,7 @@ h1 {
   padding: 10px;
 }
 
-#generate-button:hover {
+#generate-button:hover, #copy-text-button:hover {
   background-color: magenta;
   color: rgb(17, 36, 207);
   cursor: pointer;
