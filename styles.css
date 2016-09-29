@@ -1,3 +1,8 @@
+html {
+  background-image: url(images/gusto.jpg);
+  background-repeat: no-repeat;
+}
+
 h1 {
   text-align: center;
 }
@@ -8,5 +13,5 @@ h1 {
 
 textarea {
   display: block;
-  margin: 40px auto;
+  margin: 120px auto;
 }
