@@ -1,7 +1,11 @@
 $(document).ready(function () {
-  const text = ["garbage ", "gabitron ", "git sh*t ", "bluecifer ", "lingo ", "retro ", "gusto ", "milkman ", "kansas raptor ", "NaN ", "suhdude ", "gradients! ", "blakement ", "game time ", "ku sucks ", "blake street vault ", "carne asada ", "javascript tears ", "go blue ", "chaz-isms ", "magenta ", "rabbit holes ", "broncos "];
 
-  $("#generate-button").on("click", function () {
+  const generateButton = $("#generate-button");
+  const copyTextButton = $("#copy-text-button");
+
+  const text = ["garbage ", "gabitron ", "git sh*t ", "bluecifer ", "lingo ", "retro ", "gusto ", "milkman ", "kansas raptor ", "NaN ", "suhdude ", "gradients! ", "blakement ", "game-time ", "ku sucks ", "blake street vault ", "carne asada ", "javascript tears ", "go blue ", "chaz-isms ", "magenta ", "rabbit holes ", "broncos ", "bicycles ", "daledalf ", "rainbow css vomit ", "star bar "];
+
+  generateButton.on("click", function () {
 
     function random1() {
       return Math.random();
@@ -43,5 +47,10 @@ $(document).ready(function () {
     } // end of generateDown
 
   }); // end of main generate function
+
+  copyTextButton.on("click", function () {
+    $("textarea").select();
+    document.execCommand("copy");
+  });
 
 }); //end of jQuery body
