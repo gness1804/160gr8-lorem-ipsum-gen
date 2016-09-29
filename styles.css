@@ -16,6 +16,7 @@ h1 {
 
 #generate-button {
   border: 1px solid magenta;
+  border-radius: 5px;
   box-shadow: 4px 4px;
   font-weight: bold;
   margin-top: 30px;
@@ -25,10 +26,11 @@ h1 {
 #generate-button:hover {
   background-color: magenta;
   color: rgb(17, 36, 207);
+  cursor: pointer;
 }
 
 textarea {
-  border: 1px solid magenta;
+  border: 3px solid magenta;
   display: block;
   margin: 120px auto;
 }
