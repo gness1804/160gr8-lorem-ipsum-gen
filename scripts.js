@@ -3,13 +3,17 @@ $(document).ready(function () {
 
   $("#generate-button").on("click", function () {
 
-    const random = function () {
+    const random = Math.random();
+
+    console.log(random);
+
+    const random1 = function () {
       let min = 0;
       let max = 4;
       return Math.floor(Math.random() * (max - min) + min);
     };
 
-    for (var i = 0; i < text.length; i = i + random()) {
+    for (var i = 0; i < text.length; i = i + random1()) {
       $("textarea").append(text[i]);
     }
   });
