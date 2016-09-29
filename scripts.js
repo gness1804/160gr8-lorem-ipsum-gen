@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  const text = ["garbage ", "gabitron ", "git sh*t ", "bluecifer ", "lingo ", "retro ", "gusto ", "milkman ", "kansas raptor ", "NaN ", "suhdude ", "gradients! ", "blakement ", "game time ", "ku sucks ", "blake street vault ", "carne asada ", "javascript tears ", "go blue ", "chaz-isms ", "magenta ", "rabbit holes ", "broncos "];
+  const text = ["garbage ", "gabitron ", "git sh*t ", "bluecifer ", "lingo ", "retro ", "gusto ", "milkman ", "kansas raptor ", "NaN ", "suhdude ", "gradients! ", "blakement ", "game-time ", "ku sucks ", "blake street vault ", "carne asada ", "javascript tears ", "go blue ", "chaz-isms ", "magenta ", "rabbit holes ", "broncos ", "bicycles ", "daledalf ", "rainbow css vomit ", "star bar "];
 
   $("#generate-button").on("click", function () {
 
