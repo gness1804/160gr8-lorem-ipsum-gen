@@ -30,12 +30,15 @@ $(document).ready(function () {
 
     function generateDown() {
 
-      //need rng here
+      const random3 = function () {
+        let min = 0;
+        let max = 4;
+        return Math.floor(Math.random() * (max - min) + min);
+      }; // end of random3
 
-      for (var i = text.length - 1; i > 0; i--) {
+      for (var i = text.length - 1; i > 0; i = i - random3()) {
         $("textarea").append(text[i]);
-      }
-
+      } // end of for loop
 
     } // end of generateDown
 
