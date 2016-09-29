@@ -1,7 +1,10 @@
 $(document).ready(function () {
+
+  const generateButton = $("#generate-button");
+
   const text = ["garbage ", "gabitron ", "git sh*t ", "bluecifer ", "lingo ", "retro ", "gusto ", "milkman ", "kansas raptor ", "NaN ", "suhdude ", "gradients! ", "blakement ", "game-time ", "ku sucks ", "blake street vault ", "carne asada ", "javascript tears ", "go blue ", "chaz-isms ", "magenta ", "rabbit holes ", "broncos ", "bicycles ", "daledalf ", "rainbow css vomit ", "star bar "];
 
-  $("#generate-button").on("click", function () {
+  generateButton.on("click", function () {
 
     function random1() {
       return Math.random();
@@ -43,5 +46,7 @@ $(document).ready(function () {
     } // end of generateDown
 
   }); // end of main generate function
+
+
 
 }); //end of jQuery body
