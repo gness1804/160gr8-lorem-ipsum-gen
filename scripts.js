@@ -10,6 +10,9 @@ $(document).ready(function () {
     if (random1() < 0.5) {
       generateUp();
     }
+    else {
+      generateDown();
+    } // end of if else
 
     function generateUp() {
 
@@ -25,13 +28,17 @@ $(document).ready(function () {
 
     } // end of generateUp
 
+    function generateDown() {
 
+      //need rng here
+
+      for (var i = text.length - 1; i > 0; i--) {
+        $("textarea").append(text[i]);
+      }
+
+
+    } // end of generateDown
 
   }); // end of main generate function
-
-
-
-
-
 
 }); //end of jQuery body
