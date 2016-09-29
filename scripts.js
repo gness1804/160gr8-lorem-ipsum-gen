@@ -49,8 +49,11 @@ $(document).ready(function () {
   }); // end of main generate function
 
   copyTextButton.on("click", function () {
-    let TextToCopy = $("textarea").val();
-    console.log(TextToCopy);
+    // let TextToCopy = $("textarea").text();
+    // let selectedText = TextToCopy.select();
+    // console.log(selectedText);
+    $("textarea").select();
+    // document.execCommand("copy");
   });
 
 }); //end of jQuery body
