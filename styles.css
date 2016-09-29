@@ -29,6 +29,10 @@ h1 {
   cursor: pointer;
 }
 
+#radio-button-container {
+  margin: 40px auto;
+}
+
 textarea {
   border: 3px solid magenta;
   display: block;
