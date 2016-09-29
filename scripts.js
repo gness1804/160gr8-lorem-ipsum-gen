@@ -53,7 +53,7 @@ $(document).ready(function () {
     // let selectedText = TextToCopy.select();
     // console.log(selectedText);
     $("textarea").select();
-    // document.execCommand("copy");
+    document.execCommand("copy");
   });
 
 }); //end of jQuery body
