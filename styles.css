@@ -34,3 +34,7 @@ textarea {
   display: block;
   margin: 80px auto;
 }
+
+textarea:focus {
+  border: none;
+}
