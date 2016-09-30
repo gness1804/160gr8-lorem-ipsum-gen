@@ -29,7 +29,11 @@ button:hover {
   cursor: pointer;
 }
 
-#radio-button-container {
+#advanced {
+  margin: 40px auto;
+}
+
+#advanced-options-container {
   margin: 40px auto;
 }
 

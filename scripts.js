@@ -1,6 +1,5 @@
 //add function to allow user to add a phrase to the text array (clears on page reload)
 //maybe also generate word count at bottom of text box
-//consider an "advanced" options box to show up with all the fancy stuff like word count; hide it by default
 
 $(document).ready(function () {
 
@@ -15,7 +14,7 @@ $(document).ready(function () {
   const copyTextButton = $("#copy-text-button");
   const clearTextButton = $("#clear-text-from-textarea");
 
-  const text = ["garbage ", "gabitron ", "git-sh*t ", "bluecifer ", "lingo ", "retro ", "gusto ", "milkman ", "kansas-raptor ", "NaN ", "suhdude ", "gradients! ", "yoga-instructor ", "blakement ", "game-time ", "ku-sucks ", "blake-street-vault ", "carne-asada ", "javascript-tears ", "go-blue ", "chaz-isms ", "magenta ", "rabbit-holes ", " epically-bad-gusto-coffee ", "broncos ", "bicycles ", "champus ", "daledalf ", "rainbow-css-vomit ", "star-bar ", "k's-horse ", "bree's-tattoos ", "ps-lounge ", "merge-conflicts ", "weird-gifs ", "command-line ", "stack-overflow-forever ", "monstertorium ", "mod-1-beards ", "dale's-pale-ale ", "bad-wine ", "dressage ", "slack-attack "];
+  const text = ["garbage ", "gabitron ", "git-sh*t ", "bluecifer ", "lingo ", "retro ", "gusto ", "milkman ", "kansas-raptor ", "NaN ", "suhdude ", "gradients! ", "yoga-instructor ", "blakement ", "game-time ", "K.U.-sucks ", "blake-street-vault ", "carne-asada ", "javascript-tears ", "go-blue ", "chaz-isms ", "magenta ", "rabbit-holes ", " epically-bad-gusto-coffee ", "broncos ", "bicycles ", "champus ", "daledalf ", "rainbow-css-vomit ", "star-bar ", "k's-horse ", "bree's-tattoos ", "ps-lounge ", "merge-conflicts ", "weird-gifs ", "command-line ", "stack-overflow-forever ", "monstertorium ", "mod-1-beards ", "dale's-pale-ale ", "bad-wine ", "dressage ", "slack-attack "];
 
   wordChoiceRadio.on("click", function () {
     wordCountInput.prop("disabled", false);
