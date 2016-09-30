@@ -1,5 +1,6 @@
 //add function to allow user to add a phrase to the text array (clears on page reload)
 //maybe also generate word count at bottom of text box
+//maybe disable word count box if radio button is not checked
 
 $(document).ready(function () {
 
@@ -70,13 +71,18 @@ $(document).ready(function () {
   }); // end of grand function triggered when user clicks "generate" button
 
   function generateWordCountText() {
-    let wordCount = wordCountInput.val();
+    let wordCount = parseInt(Math.floor(wordCountInput.val()));
     console.log(wordCount);
-    let i = 0;
-    while (i < 100) {
-      textBox.append(text[i]);
-      i++;
-    }
+    // if (isNaN(wordCount)) {
+    //   alert('Please enter a number.');
+    //   return;
+    // }
+
+    // let i = 0;
+    // while (i < 100) {
+    //   textBox.append(text[i]);
+    //   i++;
+    // }
   } // end of generateWordCountText
 
   copyTextButton.on("click", function () {
