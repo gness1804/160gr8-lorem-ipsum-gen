@@ -12,10 +12,32 @@
   </head>
   <body>
     <h1>160gr8 Lorem Ipsum Generator</h1>
+
     <section id="container">
+
       <button id="generate-button" type="button">Generate gr8 Lorem Ipsum!</button>
+
+      <p>(If you don't care about the options below, just click the button above. Or, click the button above once you've made your selection below.)</p>
+
+      <article id="radio-button-container">
+        <label for="random-choice-button">
+          <input id="random-choice-button" type="radio" name="selection" checked="checked">Random Text Generation
+        </label>
+        <label for="words-choice-button">
+          <input id="words-choice-button" type="radio" name="selection">Word Count:
+        </label>
+        <input id="word-count-input" type="number" placeholder="Whole number 1-100." disabled="disabled">
+      </article>
+
       <textarea rows="15" cols="40" placeholder="See your beautiful 160gr8 text here..."></textarea>
-      <button id="copy-text-button" type="button">Copy Text to Clipboard</button>
-    </section>
+
+      <article id="bottom-buttons-container">
+        <button id="copy-text-button" type="button">Copy Text to Clipboard</button>
+        <button id="clear-text-from-textarea" type="button">Clear Text</button>
+      </article>
+
+
+    </section> <!-- end of main container -->
+
   </body>
 </html>
