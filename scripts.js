@@ -14,7 +14,7 @@ $(document).ready(function () {
   const copyTextButton = $("#copy-text-button");
   const clearTextButton = $("#clear-text-from-textarea");
 
-  const text = ["garbage ", "gabitron ", "git sh*t ", "bluecifer ", "lingo ", "retro ", "gusto ", "milkman ", "kansas raptor ", "NaN ", "suhdude ", "gradients! ", "yoga instructor ", "blakement ", "game-time ", "K.U. sucks ", "blake street vault ", "carne asada ", "javascript tears ", "go blue ", "chaz-isms ", "magenta ", "rabbit holes ", " epically bad gusto coffee ", "broncos ", "bicycles ", "champus ", "daledalf ", "rainbow css vomit ", "star bar ", "k's horse ", "bree's tattoos ", "ps lounge ", "merge conflicts ", "weird gifs ", "command line ", "stack overflow forever ", "monstertorium ", "mod 1 beards ", "dale's pale ale ", "bad wine ", "dressage "];
+  const text = ["garbage ", "gabitron ", "git sh*t ", "bluecifer ", "lingo ", "retro ", "gusto ", "milkman ", "kansas raptor ", "NaN ", "suhdude ", "gradients! ", "yoga instructor ", "blakement ", "game-time ", "K.U. sucks ", "blake street vault ", "carne asada ", "javascript tears ", "go blue ", "chaz-isms ", "magenta ", "rabbit holes ", " epically bad gusto coffee ", "broncos ", "bicycles ", "champus ", "daledalf ", "rainbow css vomit ", "star bar ", "k's horse ", "bree's tattoos ", "ps lounge ", "merge conflicts ", "weird gifs ", "command line ", "stack overflow forever ", "monstertorium ", "mod 1 beards ", "dale's pale ale ", "bad wine ", "dressage ", "slack attack "];
 
   wordChoiceRadio.on("click", function () {
     wordCountInput.prop("disabled", false);
@@ -80,7 +80,11 @@ $(document).ready(function () {
   function generateWordCountText() {
     let wordCount = parseInt(Math.floor(wordCountInput.val()));
 
-    //data validation...
+    if (wordCount < 0 || wordCount > 100) {
+      alert('Please choose a number between 1 and 100.');
+      wordCountInput.val("");
+      return;
+    }
 
     // let i = 0;
     // while (i < 100) {
