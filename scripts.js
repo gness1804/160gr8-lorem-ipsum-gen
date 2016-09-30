@@ -72,11 +72,8 @@ $(document).ready(function () {
 
   function generateWordCountText() {
     let wordCount = parseInt(Math.floor(wordCountInput.val()));
-    console.log(wordCount);
-    // if (isNaN(wordCount)) {
-    //   alert('Please enter a number.');
-    //   return;
-    // }
+
+    //data validation...
 
     // let i = 0;
     // while (i < 100) {
