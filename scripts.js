@@ -81,7 +81,7 @@ $(document).ready(function () {
   function generateWordCountText() {
     let wordCount = parseInt(Math.floor(wordCountInput.val()));
 
-    if (wordCount < 0 || wordCount > 100) {
+    if (wordCount < 1 || wordCount > 100) {
       alert('Please choose a number between 1 and 100.');
       wordCountInput.val("");
       return;
