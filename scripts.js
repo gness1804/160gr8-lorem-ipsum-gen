@@ -1,5 +1,6 @@
 //add function to allow user to add a phrase to the text array (clears on page reload)
 //maybe also generate word count at bottom of text box
+//consider an "advanced" options box to show up with all the fancy stuff like word count; hide it by default
 
 $(document).ready(function () {
 
@@ -85,12 +86,18 @@ $(document).ready(function () {
       wordCountInput.val("");
       return;
     }
+    else {
+      goAheadAndGenerateText(wordCount);
+    }
 
-    // let i = 0;
-    // while (i < 100) {
-    //   textBox.append(text[i]);
-    //   i++;
-    // }
+    function goAheadAndGenerateText(wordCount) {
+      let i = 0;
+      while (i < wordCount) {
+        textBox.append(text[i]);
+        i++;
+      }
+    } // end of goAheadAndGenerateText
+
   } // end of generateWordCountText
 
   copyTextButton.on("click", function () {
