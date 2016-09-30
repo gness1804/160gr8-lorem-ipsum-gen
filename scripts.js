@@ -5,7 +5,7 @@ $(document).ready(function () {
 
   const generateButton = $("#generate-button");
   const copyTextButton = $("#copy-text-button");
-  const randomChoiceRadio = $("#random-choice");
+  const randomChoiceRadio = $("#random-choice-button");
   const clearTextButton = $("#clear-text-from-textarea");
 
   const text = ["garbage ", "gabitron ", "git sh*t ", "bluecifer ", "lingo ", "retro ", "gusto ", "milkman ", "kansas raptor ", "NaN ", "suhdude ", "gradients! ", "yoga instructor ", "blakement ", "game-time ", "ku sucks ", "blake street vault ", "carne asada ", "javascript tears ", "go blue ", "chaz-isms ", "magenta ", "rabbit holes ", " epically bad gusto coffee ", "broncos ", "bicycles ", "champus ", "daledalf ", "rainbow css vomit ", "star bar ", "k's horse ", "bree's rules ", "ps lounge ", "merge conflicts ", "weird gifs ", "command line ", "stack overflow forever ", "monstertorium ", "mod 1 beards ", "dale's pale ale ", "bad wine ", "dressage "];
