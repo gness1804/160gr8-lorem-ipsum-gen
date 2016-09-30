@@ -6,6 +6,7 @@ $(document).ready(function () {
   const generateButton = $("#generate-button");
 
   const advancedOptionsContainer = $("#advanced-options-container");
+  const advancedButton = $("#advanced");
 
   const randomChoiceRadio = $("#random-choice-button");
   const wordChoiceRadio = $("#words-choice-button");
@@ -20,7 +21,10 @@ $(document).ready(function () {
 
   advancedOptionsContainer.hide();
 
-  
+  advancedButton.on("click", function () {
+    advancedOptionsContainer.show();
+    advancedButton.hide();
+  });
 
   wordChoiceRadio.on("click", function () {
     wordCountInput.prop("disabled", false);
