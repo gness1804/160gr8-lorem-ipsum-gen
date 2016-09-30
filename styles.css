@@ -55,3 +55,7 @@ textarea {
 textarea:focus {
   border: none;
 }
+
+#copy-text-button {
+  margin-right: 45px;
+}
