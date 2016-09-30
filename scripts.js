@@ -20,6 +20,10 @@ $(document).ready(function () {
     wordCountInput.prop("disabled", false);
   });
 
+  randomChoiceRadio.on("click", function () {
+    wordCountInput.prop("disabled", true);
+  });
+
   generateButton.on("click", function () {
 
     if (randomChoiceRadio.prop("checked")) {
