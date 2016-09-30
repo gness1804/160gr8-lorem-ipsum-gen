@@ -26,11 +26,13 @@
         <label for="words-choice-button">
           <input id="words-choice-button" type="radio" name="selection">Word Count:
         </label>
-        <input id="word-count-input" type="number" placeholder="Whole number 1-100." disabled="disabled" title="'Word' includes phrases joined by kebab case.">
+        <input id="word-count-input" type="number" placeholder="Whole number 1-100." disabled="disabled" title="'Word' includes phrases joined by kebab case."><br><br>
+        Add a Word to the Generator (Erases on Page Reload): <input id="add-new-word-input" type="text">
         <p id="hide-these-options">Hide These Options</p>
       </article>
 
       <textarea rows="15" cols="40" placeholder="See your beautiful 160gr8 text here..."></textarea>
+      <p id="word-count-result"></p>
 
       <article id="bottom-buttons-container">
         <button id="copy-text-button" type="button">Copy Text to Clipboard</button>

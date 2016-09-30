@@ -1,6 +1,3 @@
-//add function to allow user to add a phrase to the text array (clears on page reload)
-//maybe also generate word count at bottom of text box
-
 $(document).ready(function () {
 
   const generateButton = $("#generate-button");
@@ -11,14 +8,18 @@ $(document).ready(function () {
   const randomChoiceRadio = $("#random-choice-button");
   const wordChoiceRadio = $("#words-choice-button");
   const wordCountInput = $("#word-count-input");
+  const addNewWordInput = $("#add-new-word-input");
   const hideOptionsButton = $("#hide-these-options");
 
   const textBox = $("textarea");
+  const wordCountResult = $("#word-count-result");
 
   const copyTextButton = $("#copy-text-button");
   const clearTextButton = $("#clear-text-from-textarea");
 
-  const text = ["garbage ", "gabitron ", "git-sh*t ", "bluecifer ", "lingo ", "retro ", "gusto ", "milkman ", "kansas-raptor ", "NaN ", "suhdude ", "gradients! ", "yoga-instructor ", "blakement ", "game-time ", "K.U.-sucks ", "blake-street-vault ", "carne-asada ", "javascript-tears ", "go-blue ", "chaz-isms ", "magenta ", "rabbit-holes ", " epically-bad-gusto-coffee ", "broncos ", "bicycles ", "champus ", "daledalf ", "rainbow-css-vomit ", "star-bar ", "k's-horse ", "bree's-tattoos ", "ps-lounge ", "merge-conflicts ", "weird-gifs ", "command-line ", "stack-overflow-forever ", "monstertorium ", "mod-1-beards ", "dale's-pale-ale ", "bad-wine ", "dressage ", "slack-attack "];
+  const text = ["garbage ", "gabitron ", "bluecifer ", "lingo ", "retro ", "gusto ", "milkman ", "kansas-raptor ", "NaN ", "suhdude ", "gradients! ", "yoga-instructor ", "blakement ", "game-time ", "K.U.-sucks ", "blake-street-vault ", "carne-asada ", "javascript-tears ", "go-blue ", "chaz-isms ", "magenta ", "rabbit-holes ", "epically-bad-gusto-coffee ", "broncos ", "bicycles ", "champus ", "daledalf ", "rainbow-css-vomit ", "star-bar ", "k's-horse ", "bree's-tattoos ", "ps-lounge ", "merge-conflicts ", "weird-gifs ", "command-line ", "stack-overflow-forever ", "monstertorium ", "mod-1-beards ", "dale's-pale-ale ", "bad-wine ", "dressage ", "slack-attack ", "steve's-bad-day ", "where's-my-cubby ", "to-posse-or-not-to-posse ", "git-sh*t ", "modulo "];
+
+  let wordsInBox = [];
 
   advancedOptionsContainer.hide();
 
@@ -41,6 +42,12 @@ $(document).ready(function () {
   });
 
   generateButton.on("click", function () {
+
+    let usersWord = addNewWordInput.val();
+
+    if (usersWord !== "") {
+      text.push(usersWord + " ");
+    }
 
     if (randomChoiceRadio.prop("checked")) {
       generateRandomText();
@@ -71,6 +78,7 @@ $(document).ready(function () {
 
         for (var i = 0; i < text.length; i = i + random2()) {
           textBox.append(text[i]);
+          wordsInBox.push(text[i]);
         } // end of for loop
 
       } // end of generateUp
@@ -85,11 +93,14 @@ $(document).ready(function () {
 
         for (var i = text.length - 1; i > 0; i = i - random3()) {
           textBox.append(text[i]);
+          wordsInBox.push(text[i]);
         } // end of for loop
 
       } // end of generateDown
 
     } //end of generateRandomText
+
+    countWords();
 
   }); // end of grand function triggered when user clicks "generate" button
 
@@ -109,11 +120,20 @@ $(document).ready(function () {
       let i = 0;
       while (i < wordCount) {
         textBox.append(text[i]);
+        wordsInBox.push(text[i]);
         i++;
       }
     } // end of goAheadAndGenerateText
 
   } // end of generateWordCountText
+
+  function countWords() {
+    let count = 0;
+    for (var i = 0; i < wordsInBox.length; i++) {
+      count = count + 1;
+    }
+    wordCountResult.text("Word count: " + count);
+  } // end of countWords
 
   copyTextButton.on("click", function () {
     textBox.select();
@@ -123,6 +143,8 @@ $(document).ready(function () {
 
   clearTextButton.on("click", function () {
     textBox.text("");
+    wordsInBox = [];
+    wordCountResult.text("");
   }); // end of clear text
 
 }); //end of jQuery body

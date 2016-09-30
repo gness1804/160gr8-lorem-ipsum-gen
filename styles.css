@@ -1,5 +1,5 @@
 html {
-  background: linear-gradient(to bottom, rgb(169, 152, 204), rgb(117, 162, 130));
+  background: linear-gradient(to bottom, rgb(233, 203, 247), rgb(117, 162, 130));
   background-size: auto 1500px;
 }
 
@@ -25,7 +25,6 @@ button {
 
 button:hover {
   background-color: magenta;
-  color: rgb(17, 36, 207);
   cursor: pointer;
 }
 
