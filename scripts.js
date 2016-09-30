@@ -43,6 +43,10 @@ $(document).ready(function () {
 
   generateButton.on("click", function () {
 
+    if (addNewWordInput.val() !== "") {
+      console.log("There's some text in there.");
+    }
+
     if (randomChoiceRadio.prop("checked")) {
       generateRandomText();
     }
