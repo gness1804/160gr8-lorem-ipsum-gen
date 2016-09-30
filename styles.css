@@ -31,6 +31,12 @@ button:hover {
 
 #advanced {
   margin: 40px auto;
+  color: rgb(64, 37, 226);
+}
+
+#advanced:hover {
+	cursor: pointer;
+  text-decoration: underline;
 }
 
 #advanced-options-container {

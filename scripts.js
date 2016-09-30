@@ -20,6 +20,8 @@ $(document).ready(function () {
 
   advancedOptionsContainer.hide();
 
+  
+
   wordChoiceRadio.on("click", function () {
     wordCountInput.prop("disabled", false);
   });
