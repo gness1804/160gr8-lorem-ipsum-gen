@@ -1,4 +1,4 @@
-
+//add function to allow user to add a phrase to the text arrey (clears on page reload)
 //also need to add function to clear textarea
 
 $(document).ready(function () {
@@ -12,49 +12,55 @@ $(document).ready(function () {
   generateButton.on("click", function () {
 
     if (randomChoiceRadio.prop("checked")) {
-      //run the random code below 
+      generateRandomText();
+    }
+    else if (true) {
+      //use the word function
     }
 
-    function random1() {
-      return Math.random();
-    }
+    function generateRandomText() {
+      function random1() {
+        return Math.random();
+      }
 
-    if (random1() < 0.5) {
-      generateUp();
-    }
-    else {
-      generateDown();
-    } // end of if else
+      if (random1() < 0.5) {
+        generateUp();
+      }
+      else {
+        generateDown();
+      } // end of if else
 
-    function generateUp() {
+      function generateUp() {
 
-      const random2 = function () {
-        let min = 0;
-        let max = 4;
-        return Math.floor(Math.random() * (max - min) + min);
-      }; // end of random2
+        const random2 = function () {
+          let min = 0;
+          let max = 4;
+          return Math.floor(Math.random() * (max - min) + min);
+        }; // end of random2
 
-      for (var i = 0; i < text.length; i = i + random2()) {
-        $("textarea").append(text[i]);
-      } // end of for loop
+        for (var i = 0; i < text.length; i = i + random2()) {
+          $("textarea").append(text[i]);
+        } // end of for loop
 
-    } // end of generateUp
+      } // end of generateUp
 
-    function generateDown() {
+      function generateDown() {
 
-      const random3 = function () {
-        let min = 0;
-        let max = 4;
-        return Math.floor(Math.random() * (max - min) + min);
-      }; // end of random3
+        const random3 = function () {
+          let min = 0;
+          let max = 4;
+          return Math.floor(Math.random() * (max - min) + min);
+        }; // end of random3
 
-      for (var i = text.length - 1; i > 0; i = i - random3()) {
-        $("textarea").append(text[i]);
-      } // end of for loop
+        for (var i = text.length - 1; i > 0; i = i - random3()) {
+          $("textarea").append(text[i]);
+        } // end of for loop
 
-    } // end of generateDown
+      } // end of generateDown
 
-  }); // end of main generate function
+    } //end of generateRandomText
+
+  }); // end of grand function triggered when user clicks "generate" button
 
   copyTextButton.on("click", function () {
     $("textarea").select();
