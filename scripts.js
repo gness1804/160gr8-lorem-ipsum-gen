@@ -11,12 +11,8 @@ $(document).ready(function () {
 
   generateButton.on("click", function () {
 
-    // if (document.getElementById("random-choice").checked) {
-    //   alert('hi');
-    // }
-
     if (randomChoiceRadio.prop("checked")) {
-      alert('hi');
+      //run the random code below 
     }
 
     function random1() {
