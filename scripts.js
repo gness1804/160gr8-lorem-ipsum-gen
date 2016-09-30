@@ -7,6 +7,7 @@ $(document).ready(function () {
 
   const randomChoiceRadio = $("#random-choice-button");
   const wordChoiceRadio = $("#words-choice-button");
+  const wordCountInput = $("#word-count-input");
 
   const textBox = $("textarea");
 
@@ -69,6 +70,8 @@ $(document).ready(function () {
   }); // end of grand function triggered when user clicks "generate" button
 
   function generateWordCountText() {
+    let wordCount = wordCountInput.val();
+    console.log(wordCount);
     let i = 0;
     while (i < 100) {
       textBox.append(text[i]);
