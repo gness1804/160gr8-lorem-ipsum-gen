@@ -16,7 +16,7 @@ $(document).ready(function () {
   const copyTextButton = $("#copy-text-button");
   const clearTextButton = $("#clear-text-from-textarea");
 
-  const text = ["garbage ", "gabitron ", "bluecifer ", "lingo ", "retro ", "gusto ", "milkman ", "kansas-raptor ", "NaN ", "suhdude ", "gradients! ", "yoga-instructor ", "blakement ", "game-time ", "K.U.-sucks ", "blake-street-vault ", "carne-asada ", "javascript-tears ", "go-blue ", "chaz-isms ", "magenta ", "rabbit-holes ", "epically-bad-gusto-coffee ", "broncos ", "bicycles ", "champus ", "daledalf ", "rainbow-css-vomit ", "star-bar ", "k's-horse ", "bree's-tattoos ", "ps-lounge ", "merge-conflicts ", "weird-gifs ", "command-line ", "stack-overflow-forever ", "monstertorium ", "mod-1-beards ", "dale's-pale-ale ", "bad-wine ", "dressage ", "slack-attack ", "steve's-bad-day ", "wheres-my-cubby ", "to-posse-or-not-to-posse ", "git-sh*t "];
+  const text = ["garbage ", "gabitron ", "bluecifer ", "lingo ", "retro ", "gusto ", "milkman ", "kansas-raptor ", "NaN ", "suhdude ", "gradients! ", "yoga-instructor ", "blakement ", "game-time ", "K.U.-sucks ", "blake-street-vault ", "carne-asada ", "javascript-tears ", "go-blue ", "chaz-isms ", "magenta ", "rabbit-holes ", "epically-bad-gusto-coffee ", "broncos ", "bicycles ", "champus ", "daledalf ", "rainbow-css-vomit ", "star-bar ", "k's-horse ", "bree's-tattoos ", "ps-lounge ", "merge-conflicts ", "weird-gifs ", "command-line ", "stack-overflow-forever ", "monstertorium ", "mod-1-beards ", "dale's-pale-ale ", "bad-wine ", "dressage ", "slack-attack ", "steve's-bad-day ", "where's-my-cubby ", "to-posse-or-not-to-posse ", "git-sh*t "];
 
   let wordsInBox = [];
 
@@ -130,7 +130,11 @@ $(document).ready(function () {
   } // end of generateWordCountText
 
   function countWords() {
-
+    let count = 0;
+    for (var i = 0; i < wordsInBox.length; i++) {
+      count = count + 1;
+    }
+    console.log(count);
   } // end of countWords
 
   copyTextButton.on("click", function () {
