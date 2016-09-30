@@ -27,6 +27,11 @@ $(document).ready(function () {
     advancedButton.hide();
   });
 
+  hideOptionsButton.on("click", function () {
+    advancedOptionsContainer.hide();
+    advancedButton.show();
+  });
+
   wordChoiceRadio.on("click", function () {
     wordCountInput.prop("disabled", false);
   });
