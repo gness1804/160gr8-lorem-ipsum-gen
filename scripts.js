@@ -46,7 +46,7 @@ $(document).ready(function () {
     let usersWord = addNewWordInput.val();
 
     if (usersWord !== "") {
-      text.push(usersWord);
+      text.push(usersWord + " ");
     }
 
     if (randomChoiceRadio.prop("checked")) {
