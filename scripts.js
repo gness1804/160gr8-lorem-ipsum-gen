@@ -65,6 +65,7 @@ $(document).ready(function () {
   copyTextButton.on("click", function () {
     $("textarea").select();
     document.execCommand("copy");
+    alert('Text copied!');
   });
 
 }); //end of jQuery body
