@@ -1,4 +1,4 @@
-//add function to allow user to add a phrase to the text arrey (clears on page reload)
+//add function to allow user to add a phrase to the text array (clears on page reload)
 //maybe also generate word count at bottom of text box
 
 $(document).ready(function () {
@@ -7,6 +7,8 @@ $(document).ready(function () {
 
   const randomChoiceRadio = $("#random-choice-button");
   const wordChoiceRadio = $("#words-choice-button");
+
+  const textBox = $("textarea");
 
   const copyTextButton = $("#copy-text-button");
   const clearTextButton = $("#clear-text-from-textarea");
@@ -43,7 +45,7 @@ $(document).ready(function () {
         }; // end of random2
 
         for (var i = 0; i < text.length; i = i + random2()) {
-          $("textarea").append(text[i]);
+          textBox.append(text[i]);
         } // end of for loop
 
       } // end of generateUp
@@ -57,7 +59,7 @@ $(document).ready(function () {
         }; // end of random3
 
         for (var i = text.length - 1; i > 0; i = i - random3()) {
-          $("textarea").append(text[i]);
+          textBox.append(text[i]);
         } // end of for loop
 
       } // end of generateDown
@@ -69,19 +71,19 @@ $(document).ready(function () {
   function generateWordCountText() {
     let i = 0;
     while (i < 100) {
-      $("textarea").append(text[i]);
+      textBox.append(text[i]);
       i++;
     }
   } // end of generateWordCountText
 
   copyTextButton.on("click", function () {
-    $("textarea").select();
+    textBox.select();
     document.execCommand("copy");
     alert('Text copied!');
   }); // end of copy text
 
   clearTextButton.on("click", function () {
-    $("textarea").text("");
+    textBox.text("");
   }); // end of clear text
 
 }); //end of jQuery body
