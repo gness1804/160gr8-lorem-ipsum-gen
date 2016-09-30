@@ -1,14 +1,21 @@
+
+//also need to add function to clear textarea
+
 $(document).ready(function () {
 
   const generateButton = $("#generate-button");
   const copyTextButton = $("#copy-text-button");
   const randomChoiceRadio = $("#random-choice");
 
-  const text = ["garbage ", "gabitron ", "git sh*t ", "bluecifer ", "lingo ", "retro ", "gusto ", "milkman ", "kansas raptor ", "NaN ", "suhdude ", "gradients! ", "yoga instructor ", "blakement ", "game-time ", "ku sucks ", "blake street vault ", "carne asada ", "javascript tears ", "go blue ", "chaz-isms ", "magenta ", "rabbit holes ", "broncos ", "bicycles ", "daledalf ", "rainbow css vomit ", "star bar ", "k's horse ", "bree's rules ", "ps lounge ", "merge conflicts ", "weird gifs ", "command line ", "stack overflow forever ", "monstertorium ", "mod 1 beards ", "dale's pale ale ", "bad wine ", "dressage "];
+  const text = ["garbage ", "gabitron ", "git sh*t ", "bluecifer ", "lingo ", "retro ", "gusto ", "milkman ", "kansas raptor ", "NaN ", "suhdude ", "gradients! ", "yoga instructor ", "blakement ", "game-time ", "ku sucks ", "blake street vault ", "carne asada ", "javascript tears ", "go blue ", "chaz-isms ", "magenta ", "rabbit holes ", "broncos ", "bicycles ", "champus ", "daledalf ", "rainbow css vomit ", "star bar ", "k's horse ", "bree's rules ", "ps lounge ", "merge conflicts ", "weird gifs ", "command line ", "stack overflow forever ", "monstertorium ", "mod 1 beards ", "dale's pale ale ", "bad wine ", "dressage "];
 
   generateButton.on("click", function () {
 
-    if (document.getElementById("random-choice").checked) {
+    // if (document.getElementById("random-choice").checked) {
+    //   alert('hi');
+    // }
+
+    if (randomChoiceRadio.prop("checked")) {
       alert('hi');
     }
 
