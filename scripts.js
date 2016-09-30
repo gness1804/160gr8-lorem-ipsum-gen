@@ -64,8 +64,12 @@ $(document).ready(function () {
   }); // end of grand function triggered when user clicks "generate" button
 
   function generateWordCountText() {
-    
-  }
+    let i = 0;
+    while (i < 100) {
+      $("textarea").append(text[i]);
+      i++;
+    }
+  } // end of generateWordCountText
 
   copyTextButton.on("click", function () {
     $("textarea").select();
