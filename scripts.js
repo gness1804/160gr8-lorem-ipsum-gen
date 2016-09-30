@@ -12,6 +12,7 @@ $(document).ready(function () {
   const hideOptionsButton = $("#hide-these-options");
 
   const textBox = $("textarea");
+  const wordCountResult = $("#word-count-result");
 
   const copyTextButton = $("#copy-text-button");
   const clearTextButton = $("#clear-text-from-textarea");
@@ -134,7 +135,7 @@ $(document).ready(function () {
     for (var i = 0; i < wordsInBox.length; i++) {
       count = count + 1;
     }
-    console.log(count);
+    wordCountResult.text("Word count: " + count);
   } // end of countWords
 
   copyTextButton.on("click", function () {
@@ -146,7 +147,7 @@ $(document).ready(function () {
   clearTextButton.on("click", function () {
     textBox.text("");
     wordsInBox = [];
-    console.log(wordsInBox);
+    wordCountResult.text("");
   }); // end of clear text
 
 }); //end of jQuery body
