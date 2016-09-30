@@ -11,6 +11,7 @@ $(document).ready(function () {
   const randomChoiceRadio = $("#random-choice-button");
   const wordChoiceRadio = $("#words-choice-button");
   const wordCountInput = $("#word-count-input");
+  const hideOptionsButton = $("#hide-these-options");
 
   const textBox = $("textarea");
 
